@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeeva - Porfoio</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-y: hidden !important;
+    }
+    .box{
+        border: 1px solid #ccc;
+        background-color: rgb(207, 188, 188);
+        width: 200px;
+        height: 100px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 6.0px 12.0px 12.0px hsla(95, 48%, 55%, 0.31);
+        border: none;
+        
+    }
+
+    .border-box1{
+        border-radius: 0px 0px 300px 0px;
+        background: #0000;
+        z-index: 1;
+    }
+
+    .border-box2{
+        border-radius:  0px 200px 0px 0px;
+        background: #0000;
+    }
+
+    .border-box3{
+        border-radius:  0px 0px 0px 200px;
+        background: #0000;
+    }
+
+    
+    .border-box4{
+        border-radius:  200px 0px 0px 0px;
+        background: #0000;
+    }
+
+    .fullpage{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+       
+       
+    }
+
+    .fullpage-bg-add{
+        background-color: #000;
+    }
+    .border-box1{
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #0000;
+
+    }
+
+    .border-box2{
+        position: absolute;
+        left: 0;
+        bottom:0;
+        background: #0000;
+    }
+
+    .border-box3{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #0000;
+
+    }
+    .border-box4{
+        position: absolute;
+        right: 0;
+        bottom:0;
+        background: #0000;
+
+    }
+    .contet-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        place-items: center;
+        
+
+    }
+   
+    .contet-box>p{
+        background-color: lightcyan;
+        height: 220px;
+        width: 190px;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 6.0px 12.0px 12.0px hsla(207, 6%, 61%, 0.31);
+
+    }
+    .centet-img {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+img {
+    height: 300px;
+    width: 300px;
+    transform: scaleX(-1); 
+    transition: width 0.5s ease; /* Smooth transition for resizing */
+}
+.four-box-header{
+    position: absolute;
+    z-index: 1;
+}
+.contet-box{
+    margin-left: 210px;
+    padding: 20px;
+     gap: 60px 422px;
+     
+
+}
+
+.border-box2{
+    z-index: 3;
+}
+
+.top-left-content , .top-right-content , .bottom-left-content  , .bottom-right-content{
+
+visibility: hidden;
+}
+
+.visible-lt{
+visibility: visible;
+animation: slide-effect1 0.6s ease-in ;
+}
+
+@keyframes slide-effect1 {
+  0%{
+    transform: translateX(-600px);
+  }  
+  100%{
+    transform: translateX(0);
+  }
+} 
+
+/* -------------------- */
+
+.visible-lb{
+visibility: visible;
+animation: slide-effect2 0.6s ease-in ;
+}
+
+@keyframes slide-effect2 {
+  0%{
+    transform: translateY(-600px);
+  }  
+  100%{
+    transform: translateY(0);
+  }
+} 
+
+
+/* -------------------- */
+
+.visible-rt{
+visibility: visible;
+animation: slide-effect3 0.6s ease-in ;
+}
+
+@keyframes slide-effect3 {
+  0%{
+    transform: translateY(-600px);
+  }  
+  100%{
+    transform: translateY(0);
+  }
+} 
+
+
+/* -------------------- */
+
+.visible-rb{
+visibility: visible;
+animation: slide-effect4 0.6s ease-in ;
+}
+
+@keyframes slide-effect4 {
+  0%{
+    transform: translateX(-600px);
+  }  
+  100%{
+    transform: translateX(0);
+  }
+} 
+
+.hidden-eff{
+    visibility: hidden;
+}
+#changeimg{
+    height: 400px;
+    width: 340px;
+}
+.box>p{
+    font-size: 20px;
+    font-weight: 900;
+    color: #0ef;
+}
+
+</style>
+<body>
+    <div class="whole-wrapper">
+
+    <div class="four-box-header">
+        <div class="contet-box">
+    
+    
+           <p class="top-left-content clr">Hello , It's Me<br>Jeeva</p>
+        <p class="top-right-content">Front-end development, also known as client-side development, refers to the process of designing and implementing </p>
+        
+        <p class="bottom-left-content"> Javascrip<br>React<br>Node js</p>
+
+        <p class="bottom-right-content">Wonder-tour | Clone<br>Dynamic-drum | Classic<br>Dicee-Game | Game</p>
+    
+        
+        </div>
+       
+    
+        
+    </div>
+
+<div class="fullpage fullpage-bg-add">
+   
+   
+
+   
+    
+
+   
+
+
+ 
+
+
+
+    <div class="left-top box border-box1"> 
+      
+        <p>About Me</p>
+    </div>
+
+
+    
+
+    <div class="left-bottom box border-box2">
+        <p>Skill</p>
+    </div>
+
+
+    <div class="right-top box border-box3">
+        <p>Services</p>
+        
+    </div>
+
+    <div class="right-bottom box border-box4">
+        <p>project</p>
+    </div>
+
+
+    <div class="centet-img imge">
+        <img  src="./jeeva.jpg" alt="" id="changeimg">
+     </div>
+    
+</div>
+</div>
+
+
+<script>
+
+
+
+
+document.querySelector(".left-top").addEventListener("click",()=>{
+   
+
+    document.getElementById("changeimg").src = "./lt.jpg";
+    
+    document.querySelector(".top-left-content").classList.add("visible-lt");
+    document.querySelector(".bottom-left-content").classList.remove("visible-lb");
+    document.querySelector(".top-right-content").classList.remove("visible-rt");
+    document.querySelector(".bottom-right-content").classList.remove("visible-rb");
+
+
+    
+
+
+})
+
+document.querySelector(".left-bottom").addEventListener("click",()=>{
+
+document.getElementById("changeimg").src = "./rb.jpg";  
+//issue image
+
+    
+    document.querySelector(".bottom-left-content").classList.add("visible-lb");    
+    document.querySelector(".top-left-content").classList.remove("visible-lt");
+    document.querySelector(".top-right-content").classList.remove("visible-rt");
+    document.querySelector(".bottom-right-content").classList.remove("visible-rb");
+
+   
+})
+
+document.querySelector(".right-top").addEventListener("click",()=>{
+
+    document.getElementById("changeimg").src = "./rt.jpg";
+
+    document.querySelector(".top-right-content").classList.add("visible-rt");
+    document.querySelector(".bottom-left-content").classList.remove("visible-lb");
+    document.querySelector(".top-left-content").classList.remove("visible-lt");
+    document.querySelector(".bottom-right-content").classList.remove("visible-rb");
+
+
+})
+
+document.querySelector(".right-bottom").addEventListener("click",()=>{
+
+    document.getElementById("changeimg").src = "./lb.jpg";
+    //issue img
+
+    document.querySelector(".bottom-right-content").classList.add("visible-rb");
+    document.querySelector(".top-right-content").classList.remove("visible-rt");
+    document.querySelector(".bottom-left-content").classList.remove("visible-lb");
+    document.querySelector(".top-left-content").classList.remove("visible-lt");
+
+
+})
+</script>
+
+</body>
+</html>
